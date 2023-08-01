@@ -1,0 +1,19 @@
+{
+  "name": "version1trial",
+  "version": "1.0.0",
+  "description": "This will act as a starter repository for **WebTips** 🌐💻 projects",
+  "main": "index.js",
+  "directories": {
+    "doc": "docs",
+    "test": "tests"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "jest": "^29.6.2"
+  }
+}
