@@ -1,4 +1,4 @@
-name: Lint Code Base
+name: Prettier
 
 on: 
   pull_request:
