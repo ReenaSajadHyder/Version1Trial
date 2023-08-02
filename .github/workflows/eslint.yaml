@@ -6,8 +6,8 @@ on:
   workflow_dispatch:
 
 jobs:
-  build:
-    name: Lint Code Base
+  JS:
+    name: Lint Code Base for JS
     runs-on: windows-2022
 
     steps:
@@ -18,7 +18,20 @@ jobs:
           fetch-depth: 0
       - name: Install packages
         run: npm ci
-      - name: Lint HTML files 
-        run: npm run lintHTML
       - name: Lint JavaScript files 
         run: npm run lintJS
+  HTML:
+      name: Lint Code Base for HTML
+      runs-on: windows-2022
+
+      steps:
+
+        - name: Checkout Code
+          uses: actions/checkout@v3
+          with:
+            fetch-depth: 0
+        - name: Install packages
+          run: npm ci
+        - name: Lint HTML files 
+          run: npm run lintHTML
+      
