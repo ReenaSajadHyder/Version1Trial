@@ -6,7 +6,7 @@
   "scripts": {
     "test": "jest --passWithNoTests",
     "format": "prettier --write \"src/**/*.{js,html,css}\"",
-    "lint": "eslint \"src/**/*.{js}\" --quiet"
+    "lint": "eslint \"src/**/*.{js}\""
   },
   "keywords": [],
   "author": "",
