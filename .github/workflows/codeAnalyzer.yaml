@@ -1,0 +1,50 @@
+name: Analyze Code
+
+on: 
+  pull_request:
+        branches: [ main ]
+  workflow_dispatch:
+
+jobs:
+  format-check:
+    name: Lint Code Base
+    runs-on: windows-2022
+
+    steps:
+
+      - name: Checkout Code
+        uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
+      - name: Install packages
+        run: npm ci
+      - name: Prettier
+        run: npm run format
+  JS:
+    name: Lint Code Base for JS
+    runs-on: windows-2022
+
+    steps:
+
+      - name: Checkout Code
+        uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
+      - name: Install packages
+        run: npm ci
+      - name: Lint JavaScript files 
+        run: npm run lintJS
+  HTML:
+      name: Lint Code Base for HTML
+      runs-on: windows-2022
+
+      steps:
+
+        - name: Checkout Code
+          uses: actions/checkout@v3
+          with:
+            fetch-depth: 0
+        - name: Install packages
+          run: npm ci
+        - name: Lint HTML files 
+          run: npm run lintHTML
