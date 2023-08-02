@@ -5,8 +5,8 @@
   "main": "index.js",
   "scripts": {
     "test": "jest --passWithNoTests",
-    "format": "prettier --write \"src/.{js,html,css}\"",
-    "lint": "eslint \"src/.{js}\" --quiet"
+    "format": "prettier --write \"src/**/*.{js,html,css}\"",
+    "lint": "eslint \"src/**/*.{js}\" --quiet"
   },
   "keywords": [],
   "author": "",
