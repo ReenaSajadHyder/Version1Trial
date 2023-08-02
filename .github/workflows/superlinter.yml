@@ -8,7 +8,11 @@ on:
 jobs:
   build:
     name: Lint Code Base
-    runs-on: windows-latest
+    runs-on: ${{ matrix.os }}
+    
+    strategy:
+            matrix:
+                os: [windows-latest]
 
     steps:
 
