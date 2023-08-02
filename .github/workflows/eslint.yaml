@@ -1,0 +1,24 @@
+name: EsLint
+
+on: 
+  pull_request:
+        branches: [ main ]
+  workflow_dispatch:
+
+jobs:
+  build:
+    name: Lint Code Base
+    runs-on: windows-2022
+
+    steps:
+
+      - name: Checkout Code
+        uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
+      - name: Install packages
+        run: npm ci
+      - name: Lint HTML files 
+        run: npm run lintHTML
+      - name: Lint JavaScript files 
+        run: npm run lintJS
