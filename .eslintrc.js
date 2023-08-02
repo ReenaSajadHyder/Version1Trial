@@ -25,7 +25,15 @@ module.exports = {
     ecmaVersion: 'latest'
   },
   plugins: [
-    'react'
+    'react',
+    'html'
+  ],
+  overrides: [
+    {
+      files: ["*.html"],
+      parser: "@html-eslint/parser",
+      extends: ["plugin:@html-eslint/recommended"],
+    },
   ],
   rules: {
   }
