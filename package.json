@@ -7,7 +7,8 @@
     "test": "jest --passWithNoTests",
     "format": "prettier --write \"src/**/*.{js,html,css}\"",
     "lintJS": "eslint \"src/**/*.js\"",
-    "lintHTML": "eslint \"src/**/*.html\""
+    "lintHTML": "eslint \"src/**/*.html\"",
+    "lintCSS": "stylelint \"**/*.css\""
   },
   "keywords": [],
   "author": "",
@@ -24,6 +25,8 @@
     "eslint-plugin-promise": "^6.1.1",
     "eslint-plugin-react": "^7.33.1",
     "jest": "^29.6.2",
-    "prettier": "3.0.0"
+    "prettier": "3.0.0",
+    "stylelint": "^15.10.2",
+    "stylelint-config-standard": "^34.0.0"
   }
 }
