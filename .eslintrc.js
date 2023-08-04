@@ -6,7 +6,8 @@ module.exports = {
   },
   extends: [
     'standard',
-    'plugin:react/recommended'
+    'plugin:react/recommended',
+    'plugin:jsdoc/recommended'
   ],
   overrides: [
     {
@@ -26,7 +27,8 @@ module.exports = {
   },
   plugins: [
     'react',
-    'html'
+    'html',
+    'jsdoc'
   ],
   overrides: [
     {
@@ -36,5 +38,6 @@ module.exports = {
     },
   ],
   rules: {
+    "id-match": ["error", "^[a-z]+([A-Z][a-z]+)*$"]
   }
 }
