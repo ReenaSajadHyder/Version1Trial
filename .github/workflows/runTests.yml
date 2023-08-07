@@ -26,6 +26,10 @@ jobs:
             - name: test
               run: |
                   npm test --findRelatedTests tests/unit/
+            - name: test
+              run: |
+                  npm test -- --coverage --collectCoverageFrom="./src/**" --findRelatedTests tests/unit/
+                    
                   
     playwright-test:
         timeout-minutes: 60
