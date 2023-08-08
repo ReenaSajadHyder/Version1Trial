@@ -9,6 +9,7 @@ jobs:
   format-check:
     name: Lint Code Base with Prettier 
     runs-on: windows-2022
+    timeout-minutes: 60
 
     steps:
 
@@ -23,6 +24,7 @@ jobs:
   JS:
     name: Lint JS Files 
     runs-on: windows-2022
+    timeout-minutes: 60
 
     steps:
 
@@ -37,6 +39,7 @@ jobs:
   HTML:
       name: Lint HTML Files 
       runs-on: windows-2022
+      timeout-minutes: 60
 
       steps:
 
@@ -51,6 +54,7 @@ jobs:
   CSS:
       name: Lint CSS Files 
       runs-on: windows-2022
+      timeout-minutes: 60
 
       steps:
 
