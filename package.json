@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "jest --passWithNoTests",
+    "playwrightTest": "npx playwright test tests/acceptance --pass-with-no-tests",
     "format": "prettier --write \"src/**/*.{js,html,css}\"",
     "lintJS": "eslint \"src/**/*.js\"",
     "lintHTML": "eslint \"src/**/*.html\"",
