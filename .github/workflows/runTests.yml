@@ -8,7 +8,6 @@ on:
 jobs:
     jest-test:
         runs-on: ${{ matrix.os }}
-        timeout-minutes: 60
 
         strategy:
             matrix:
@@ -27,10 +26,9 @@ jobs:
             - name: test
               run: |
                   npm test --findRelatedTests tests/unit/
-            - name: test
+            - name: code coverage
               run: |
-                  npm test -- --coverage --collectCoverageFrom="./src/**" --findRelatedTests tests/unit/
-                    
+                   npm test -- --coverage --collectCoverageFrom="./src/**" --findRelatedTests tests/unit/
                   
     playwright-test:
         timeout-minutes: 60
