@@ -7,7 +7,7 @@ on:
 
 jobs:
   format-check:
-    name: Lint Code Base
+    name: Lint Code Base with Prettier 
     runs-on: windows-2022
 
     steps:
@@ -21,7 +21,7 @@ jobs:
       - name: Prettier
         run: npm run format
   JS:
-    name: Lint Code Base for JS
+    name: Lint JS Files 
     runs-on: windows-2022
 
     steps:
@@ -35,7 +35,7 @@ jobs:
       - name: Lint JavaScript files 
         run: npm run lintJS
   HTML:
-      name: Lint Code Base for HTML
+      name: Lint HTML Files 
       runs-on: windows-2022
 
       steps:
@@ -48,9 +48,8 @@ jobs:
           run: npm ci
         - name: Lint HTML files 
           run: npm run lintHTML
-
-    CSS:
-      name: Lint Code Base for CSS
+  CSS:
+      name: Lint CSS Files 
       runs-on: windows-2022
 
       steps:
@@ -61,5 +60,5 @@ jobs:
             fetch-depth: 0
         - name: Install packages
           run: npm ci
-        - name: Lint HTML files 
+        - name: Lint CSS files 
           run: npm run lintCSS
