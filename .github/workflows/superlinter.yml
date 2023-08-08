@@ -6,16 +6,15 @@ on:
   workflow_dispatch:
 
 jobs:
-  build:
+  linter:
     name: Lint Code Base
     runs-on: ${{ matrix.os }}
     
     strategy:
             matrix:
-                os: [ubuntu-latest, windows-latest]
+                os: [windows-2022]
 
     steps:
-
       - name: Checkout Code
         uses: actions/checkout@v3
         with:
