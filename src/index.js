@@ -1,4 +1,4 @@
-const index = (a, b) => a - b;
+// const index = (a, b) => a - b;
 
 var my_favorite_color = "#112C85";
 
